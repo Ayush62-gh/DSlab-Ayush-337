@@ -1,0 +1,23 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build and Run C Program",
+            "type": "shell",
+            "command": "cmd.exe",
+            "args": [
+                "/c",
+                "taskkill /IM \"${fileBasenameNoExtension}.exe\" /F >nul 2>&1 & gcc \"${file}\" -o \"${fileDirname}\\${fileBasenameNoExtension}.exe\" && \"${fileDirname}\\${fileBasenameNoExtension}.exe\""
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Custom task: kill old exe, build and run"
+        }
+    ]
+}
