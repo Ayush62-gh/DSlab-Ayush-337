@@ -25,11 +25,13 @@ int main() {
     Node* B = new Node('B');
     Node* C = new Node('C');
     Node* D = new Node('D');
+    Node* E = new Node('E');
 
     A->next = B;
     B->next = C;
     C->next = D;
-    D->next = nullptr;
+    D->next = E;
+    E->next = nullptr;
 
     traverse(A);
 
