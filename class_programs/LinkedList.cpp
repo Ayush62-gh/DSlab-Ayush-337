@@ -2,37 +2,65 @@
 using namespace std;
 
 struct Node {
-    char data;
+    int data;
     Node* next;
-    Node(char value) {
+    Node(int value) {
         data = value;
         next = nullptr;
     }
 };
 
-void traverse(Node* A) {
-    Node* PTR = A;
-    int count = 0;
-    while (PTR != nullptr) {
-        cout << PTR->data << " ";
-        PTR = PTR->next;
-        count = count + 1;
+void insertEnd(Node*& head, int value) {
+    Node* newNode = new Node(value);
+    if (!head) {
+        head = newNode;
+        return;
     }
+    Node* temp = head;
+    while (temp->next) temp = temp->next;
+    temp->next = newNode;
+}
+
+void traverse(Node* head) {
+    Node* PTR = head;
+    int COUNT = 0;
+    while (PTR) {
+        cout << PTR->data << " -> ";
+        PTR = PTR->next;
+        COUNT++;
+    }
+    cout << "NULL" << endl;
+    cout << "Total nodes = " << COUNT << endl;
 }
 
 int main() {
-    Node* A = new Node('A');
-    Node* B = new Node('B');
-    Node* C = new Node('C');
-    Node* D = new Node('D');
-    Node* E = new Node('E');
+    Node* head = nullptr;
+    int choice, value;
 
-    A->next = B;
-    B->next = C;
-    C->next = D;
-    D->next = E;
-    E->next = nullptr;
+    do {
+        cout << "1. Insert at End\n";
+        cout << "2. Traverse List\n";
+        cout << "3. Exit\n";
+        cout << "Enter choice: ";
+        cin >> choice;
 
-    traverse(A);
+        switch (choice) {
+            case 1:
+                cout << "Enter value: ";
+                cin >> value;
+                insertEnd(head, value);
+                break;
+            case 2:
+                traverse(head);
+                break;
+            case 3:
+                cout << "Exiting...\n";
+                break;
+            default:
+                cout << "Invalid choice!\n";
+        }
+    } while (choice != 3);
 
+    return 0;
 }
+
