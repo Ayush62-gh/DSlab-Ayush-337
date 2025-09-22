@@ -38,9 +38,9 @@ int main() {
     int choice, value;
 
     do {
-        cout << "1. Insert at End\n";
-        cout << "2. Traverse List\n";
-        cout << "3. Exit\n";
+        cout << "1.Insert at End\n";
+        cout << "2.Traverse List\n";
+        cout << "3.Exit\n";
         cout << "Enter choice: ";
         cin >> choice;
 
