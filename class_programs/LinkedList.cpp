@@ -74,6 +74,9 @@ struct node *InsAfter(struct node *start, int after, int y)
     temp->next = p;
     return start;
 }
+struct node *Delete(struct node *start,int y){
+
+}
 
 int main()
 {
@@ -85,7 +88,8 @@ int main()
         cout << "2.Insert at Beginning" << endl;
         cout << "3.Insert at end" << endl;
         cout << "4.Insert after a node" << endl;
-        cout << "5.Exit" << endl;
+        cout << "5.Deletion from beginning" << endl;
+        cout << "6.Exit" << endl;
         cin >> choice;
 
         switch (choice)
@@ -122,6 +126,14 @@ int main()
             break;
         }
         case 5:
+        {
+            int y;
+            cout<<"Enter the element to be deleted";
+            cin>>y;
+            start=Delete(start,y);
+            break;
+        }
+        case 6:
         {
             cout << "Exiting the program" << endl;
             break;
