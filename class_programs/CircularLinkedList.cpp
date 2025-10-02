@@ -111,6 +111,14 @@ struct node *DeleteEnd(struct node *start) {
     free(temp);
     return start;
 }
+struct node *DeleteAfter(struct node *start, int after){
+    if (start == NULL){
+        cout<<"List is empty"<<endl;
+        return start;
+    }
+    struct node *temp=start;
+   
+}
 
 int main() {
     int choice;
