@@ -66,19 +66,25 @@ int main(){
     }
     switch(ch){
         case 1:
-        cout<<"Enter the elemnt to be inserted in the stack:"<<endl;
-        cin >> value;
-        push(value);
+           cout<<"Enter the elemnt to be inserted in the stack:"<<endl;
+           cin >> value;
+           push(value);
+           break;
         case 2:
-        cout<<"Deleting the top element from the stack."<<endl;
-        pop();
+           cout<<"Deleting the top element from the stack."<<endl;
+           pop();
+           break;
         case 3:
-        cout<<"Seeing the top element of the stack."<<endl;
-        peek();
+           cout<<"Seeing the top element of the stack."<<endl;
+           peek();
+           break;
         case 4:
-        cout<<"Displaying the elements of the stack."<<endl;
-        display();
-
+           cout<<"Displaying the elements of the stack."<<endl;
+           display();
+           break;
+        default:
+           cout<<"Uh OH!! you have entered wrong choice try again.";
+        
     }
     
 
