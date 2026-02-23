@@ -5,13 +5,13 @@
 #include <iostream>
 using namespace std;
 
-int main()
-{
-    pair<int, int> a;
-    a.first = 10;
-    a.second = 20;
-    cout << a.first << " " << a.second << endl;
-}
+// int main()
+// {
+//     pair<int, int> a;
+//     a.first = 10;
+//     a.second = 20;
+//     cout << a.first << " " << a.second << endl;
+// }
 
 // pair<int,int>a(10,20);
 // pair<int,int>a-{10,20};
@@ -20,3 +20,14 @@ int main()
 // pair<int,string>a(10,"abc");
 // nested pair(pair ke andar pair)
 // pair<int,pair<string,string>>student(1,{"abc","def"});
+
+//program for comparing two pairs
+int main(){
+    pair<int,int>a(5,1);
+    pair<int,int>b(10,1);
+    if(a==b){
+        cout<<"a and b are equal"<<endl;
+    }else{
+        cout<<"a and b are not equal"<<endl;
+    }
+}
